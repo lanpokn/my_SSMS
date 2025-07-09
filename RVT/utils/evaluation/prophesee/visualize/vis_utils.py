@@ -114,6 +114,9 @@ def draw_bboxes(img, boxes, labelmap=LABELMAP_GEN1) -> None:
         size = (int(boxes["w"][i]), int(boxes["h"][i]))
         pt2 = (pt1[0] + size[0], pt1[1] + size[1])
         score = boxes["class_confidence"][i]
+        # print(score)
+        if score < 0.8:
+            continue  # 跳过低置信度的框
         class_id = boxes["class_id"][i]
         class_name = labelmap[class_id % len(labelmap)]
         color = colors[class_id * 60 % 255]

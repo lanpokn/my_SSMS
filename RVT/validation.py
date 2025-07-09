@@ -117,7 +117,7 @@ class VisualizationCallback(Callback):
         # label_img = ev_img.copy()
         # labels_proph = outputs[ObjDetOutput.LABELS_PROPH][sample_idx]
         # draw_bboxes(label_img, labels_proph, labelmap=pl_module.label_map)
-        
+        # print(outputs[ObjDetOutput.SKIP_VIZ])
         if outputs[ObjDetOutput.SKIP_VIZ]:
             return
         ev_tensor = outputs[ObjDetOutput.EV_REPR]
