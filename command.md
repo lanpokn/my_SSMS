@@ -1,0 +1,1 @@
+python RVT/validation.py dataset=gen4 dataset.path="E:\2025\event_flick_flare\object_detection\ssms_event_cameras-master\gen4" checkpoint="E:\2025\event_flick_flare\object_detection\ssms_event_cameras-master\checkpoints\gen4_base.ckpt" use_test_set=1 hardware.gpus=0 +experiment/gen4=base.yaml batch_size.eval=1 model.postprocess.confidence_threshold=0.001
